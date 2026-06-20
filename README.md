@@ -92,10 +92,21 @@ git clone https://github.com/chatgptiv4/Google-Form-Auto-Submitter.git
 
 cd google-form-automator
 
-2. Install Dependencies
-bash
+```
+
+
+\### 2. Install Dependencies
+
+
+```bash
+
 pip install -r requirements.txt
-3. Configure Your Form
+
+```
+
+\### 3. Configure Your Form
+
+```bash
 Edit config.py with your form details:
 
 python
@@ -118,14 +129,17 @@ FORM_CONFIG = {
         # ... add your options
     }
 }
-4. Run the Submitter
+```
+
+\###  4. Run the Submitter
 Selenium Version (Recommended for reliability):
 
-bash
+```bash
 python selenium_submitter.py
 Requests Version (Faster, lighter):
+```
 
-bash
+```bash
 python requests_submitter.py
 📖 How to Get Your Form Entry IDs
 Method 1: Browser Developer Tools (Recommended)
@@ -152,7 +166,8 @@ Right-click → View Page Source
 
 Search for entry.
 
-Note all entry IDs and their corresponding questions
+Note all entry IDs and their corresponding question
+```
 
 Method 3: JavaScript Console
 Run this in your browser console on the form page:
@@ -162,6 +177,7 @@ Array.from(document.querySelectorAll('[name^="entry."]'))
     .map(el => el.name)
     .filter((v, i, a) => a.indexOf(v) === i)
     .forEach(entry => console.log(entry));
+
 ⚙️ Configuration Options
 selenium_submitter.py
 python
